@@ -15,8 +15,8 @@ export class EstudianteController {
   }
 
    // Obtiene un estudiante por su id 
-   @Get(':identificador')
-   obtenerEstudiantePorId( @Param('identificador') idx:number ): Estudiante{
+   @Get(':identif')
+   obtenerEstudiantePorId( @Param('identif') idx:number ): Estudiante{
        return this.servicio.obtenerEstudiantePorId(idx);
    }
 

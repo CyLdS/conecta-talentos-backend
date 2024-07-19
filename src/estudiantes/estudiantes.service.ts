@@ -27,7 +27,8 @@ export class EstudiantesService {
     eliminarEstudiante(id: number):void{
         for(let i = 0; i < this.estudiante.length; i++){
             if(this.estudiante[i].id == id){
-                this.estudiante.splice(i -1, 1);
+                this.estudiante.splice(i-1, 1);
+               
             }
         }
     }
