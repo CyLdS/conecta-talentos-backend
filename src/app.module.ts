@@ -5,10 +5,12 @@ import { EstudianteController } from './estudiantes/estudiantes.controller';
 import { EstudiantesService } from './estudiantes/estudiantes.service';
 import { EmpresasController } from './empresas/empresas.controller';
 import { EmpresasService } from './empresas/empresas.service';
+import { OfertasLaboralesController } from './ofertas-laborales/ofertas-laborales.controller';
+import { OfertasLaboralesService } from './ofertas-laborales/ofertas-laborales.service';
 
 @Module({
   imports: [],
-  controllers: [AppController, EstudianteController, EmpresasController],
-  providers: [AppService, EstudiantesService, EmpresasService],
+  controllers: [AppController, EstudianteController, EmpresasController, OfertasLaboralesController],
+  providers: [AppService, EstudiantesService, EmpresasService, OfertasLaboralesService],
 })
 export class AppModule {}
