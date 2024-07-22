@@ -21,8 +21,8 @@ export class OfertasLaboralesService {
         }
         return null; 
     }
-
-    obtenerOfertasLaborales(): OfertaLaboral[] {
+    //obtener por filto 
+    obtenerOfertasLaborales(empresa?: string, estado?: string): OfertaLaboral[] {
         return this.ofertasLabolrales;
     }
 
