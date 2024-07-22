@@ -4,30 +4,30 @@ import { Estudiante } from 'src/estudiante';
 @Injectable()
 export class EstudiantesService {
 
-    private estudiante: Estudiante[]= [];
+    private estudiantes: Estudiante[]= [];
 
     obtenerEstudiante(): Estudiante[] {
-        return this.estudiante;
+        return this.estudiantes;
     }
 
-    obtenerEstudiantePorId( idx:number ): Estudiante{
-        for(let i = 0; i < this.estudiante.length; i++){
-            if(this.estudiante[i].id == idx){
-                return this.estudiante[i];
+    obtenerEstudiantePorId( id:number ): Estudiante{
+        for(let i = 0; i < this.estudiantes.length; i++){
+            if(this.estudiantes[i].id == id){
+                return this.estudiantes[i];
             }
         }
         return null; 
     }
     
     crearEstudiante( estudiante:Estudiante ):void{
-        estudiante.id = this.estudiante.length + 1;
-        this.estudiante.push(estudiante);
+        estudiante.id = this.estudiantes.length + 1;
+        this.estudiantes.push(estudiante);
     }
 
     eliminarEstudiante(id: number):void{
-        for(let i = 0; i < this.estudiante.length; i++){
-            if(this.estudiante[i].id == id){
-                this.estudiante.splice(i-1, 1);
+        for(let i = 0; i < this.estudiantes.length; i++){
+            if(this.estudiantes[i].id == id){
+                this.estudiantes.splice(i, 1);
                
             }
         }

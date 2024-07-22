@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { Estudiante } from 'src/estudiante';
 import { EstudiantesService } from './estudiantes.service';
 
-@Controller('estudiante')
+@Controller('estudiantes')
 export class EstudianteController {
 
   constructor(private readonly servicio:EstudiantesService){}
@@ -15,9 +15,9 @@ export class EstudianteController {
   }
 
    // Obtiene un estudiante por su id 
-   @Get(':identif')
-   obtenerEstudiantePorId( @Param('identif') idx:number ): Estudiante{
-       return this.servicio.obtenerEstudiantePorId(idx);
+   @Get(':id')
+   obtenerEstudiantePorId( @Param('id') id:number ): Estudiante{
+       return this.servicio.obtenerEstudiantePorId(id);
    }
 
      // Obtiener todos los estudiantes
